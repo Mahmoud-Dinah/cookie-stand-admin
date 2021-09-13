@@ -1,4 +1,4 @@
-{
+{"name": "cookie-stand-admin",
   "private": true,
   "scripts": {
     "dev": "next dev",
