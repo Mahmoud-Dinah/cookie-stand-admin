@@ -3,7 +3,7 @@ return (
     <table>
         <thead>
             <tr>
-            <th className="p-3 border border-gray-70 bg-green-600">Location</th>
+            <th className="p-3 border border-gray-70 bg-green-600">Locations</th>
                     {props.hours.map(hour => (
                     <th className="p-3 border border-gray-70 bg-green-600">{hour}</th>
                      ))}
@@ -18,9 +18,9 @@ return (
                          <td className="p-3 pl-2 border bg-green-500">{hour}</td>
                 ))
                     }
-                     <td className="p-3 pl-2 border bg-green-500">517</td>
+                     <td className="p-3 pl-2 border bg-green-500">750</td>
                   </tr>))
-                }aa
+                }
         </tbody>
     </table>
 )

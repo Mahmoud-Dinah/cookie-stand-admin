@@ -4,28 +4,36 @@ import Header from './Header'
 import Footer from './Footer'
 import CreateForm from './CreateForm'
 import ReportTable from './ReportTable'
+
 export default function CookieStandAdmin() {
 
-const [cookiesInformations, setCookIesinfo] = useState([])
-
-function cookieInfoHandler(formInfo) {
-
-    const cookiesInfo = {
+    const [cookiesInformations,setCookIesinfo] = useState([])
+  
+    function cookieInfoHandler(formInfo) {
+      
+      
+     
+      const cookiesInfo = {
         location: formInfo.location,
         hour_sales: formInfo.hour_sales
-
+        
+      }
+  
+      setCookIesinfo(info => [...info, cookiesInfo])
+  
+  
     }
-    setCookIesinfo(info => [...info, cookiesInfo])
-
-    const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm']
-
+    const hours = ['6 am','7 am','8 am','9 am','10 am','11 am','12 pm','1 pm','2 pm','3 pm','4 pm','5 pm','6 pm','7 pm']
+    
     function getLatestReply() {
-        if (cookiesInformations.length >= 1) {
-            return cookiesInformations[cookiesInformations.length - 1]
-
-        } else {
-            return "Nothing Added"
-        }
+      if(cookiesInformations.length>=1){
+        return cookiesInformations[cookiesInformations.length-1]
+  
+        
+      
+      } else{
+        return "Nothing added"
+      }
     }
 
     return (
@@ -48,4 +56,4 @@ function cookieInfoHandler(formInfo) {
         </div>
     )
 
-}}
+}
